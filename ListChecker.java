@@ -32,31 +32,43 @@ public class ListChecker {
 		return itemList;
 	}
 	
-	
-	/*public static void getFile() {
-		Desktop d = null;
-		String desktopPath = System.getProperty("user.home") + "/Desktop";
-		System.out.print(desktopPath.replace("\\", "/"));
-		File f = new File(desktopPath);
-		if(Desktop.isDesktopSupported()) {
-			d = Desktop.getDesktop();
+	public static String getNeeds(ArrayList<Item> itemL) {
+		String recipt = "";
+		String needStr;
+		int numNeeds;
+		double iCost;
+		double total = 0;
+		for(Item thing: itemL) {
+			numNeeds = thing.maxAmmount - thing.has;
+			if(numNeeds > 0) {
+				iCost = thing.supPrice * numNeeds;
+				total += iCost;
+				needStr = String.format("%s: $%.2f x %d = %.2f", thing.name, thing.supPrice, numNeeds, iCost);
+				recipt = recipt + "\n" + needStr;
+			}
 		}
+		if(recipt == "") {
+			return "Looks like you are all good on inventory!";
+		}
+		recipt += String.format("\nYour total cost is $%.2f", total);
 		
-		try {
-			d.open(f);
-		}
-		catch(IOException e){
-			
-		}
-	}*/
+		return recipt;
+		
+	}
+	
 
 	
 	public static void main(String[] args) {
-		//getFile();
 		ArrayList<Item> b = bigRead();
-		for(Item p: b) {
+		/*for(Item p: b) {
 			System.out.println(p);
-		}
+		}*/
+		
+		/*b.get(0).setHas(9);
+		b.get(1).setHas(9);
+		b.get(2).setHas(9);*/
+		String o = getNeeds(b);
+		System.out.println(o);
 	}
 
 }

@@ -1,3 +1,4 @@
+package application.Model;
 
 
 public class Item {
@@ -5,12 +6,16 @@ public class Item {
 	int id;
 	double supPrice;
 	int maxAmmount;
+	int has;
+	boolean checked;
 	
 	public Item(String name, int id, double price, int max){
 		this.name = name;
 		this.id = id;
 		this.supPrice = price;
 		this.maxAmmount = max;
+		this.has = this.maxAmmount;
+		this.checked = false;
 	}
 	
 	public String getName() {
@@ -27,6 +32,15 @@ public class Item {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getHas() {
+		return has;
+	}
+
+	public void setHas(int has) {
+		this.checked = true;
+		this.has = has;
 	}
 
 	public double getSupPrice() {

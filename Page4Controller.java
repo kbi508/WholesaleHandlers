@@ -1,4 +1,4 @@
-package application;
+package application.controller;
 
 import java.io.IOException;
 
@@ -20,7 +20,7 @@ public class Page4Controller {
 
     @FXML
     void handle1(ActionEvent event) throws IOException {
-    	finalpane = FXMLLoader.load(getClass().getResource("Main.fxml"));
+    	finalpane = FXMLLoader.load(getClass().getResource("/application/view/Main.fxml"));
     	Scene scene = new Scene(finalpane, 600, 600);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);

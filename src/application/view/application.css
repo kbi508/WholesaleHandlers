@@ -1,0 +1,16 @@
+.rott{
+	-fx-background-color: #03fcdb;
+}
+
+.label{
+	-fx-font-size: 12;
+	-fx-font-family: "Lucida Console";
+	-fx-text-fill: "black"
+}
+
+.image-view{
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+}
+

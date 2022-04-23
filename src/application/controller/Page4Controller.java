@@ -2,6 +2,7 @@ package application.controller;
 
 import java.io.IOException;
 
+import application.Model.Inventory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,12 @@ public class Page4Controller {
     private AnchorPane finalpane;
     @FXML
     private TextArea textArea;
+    
+    void initialize() {
+    	Inventory i = Inventory.getInstance();
+    	System.out.println(i.getNeeds());
+    	textArea.setText(i.getNeeds());
+    }
 
     @FXML
     void handle1(ActionEvent event) throws IOException {

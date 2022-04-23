@@ -7,8 +7,12 @@ import application.Model.Item;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -59,6 +63,7 @@ public class Page3Controller {
     
     
     
+    
 
     @FXML
     void handle1(ActionEvent event) throws IOException {
@@ -71,6 +76,19 @@ public class Page3Controller {
     }
     @FXML
     void handle2(ActionEvent event) {
+    	try {
+    		int has = Integer.parseInt(userAmmount.getText());
+    		if( has >= 0) {
+    			curItem.setHas(has);
+        		System.out.println(String.format("There are %d of  %s", curItem.getHas(), curItem.getName()));
+    			query.setText(String.format("You have %d %ss",curItem.getHas(), curItem.getName()));
+    			query.setAlignment(Pos.BASELINE_RIGHT);
+    		}
+    		
+    	} catch (NumberFormatException e) {
+    		Alert alert = new Alert(AlertType.INFORMATION, "Content here", ButtonType.OK);
+    		alert.show();
+    	}
 
     }
     

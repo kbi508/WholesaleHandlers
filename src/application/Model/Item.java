@@ -18,6 +18,10 @@ public class Item {
 		this.checked = false;
 	}
 	
+	public boolean getChecked() {
+		return this.checked;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -40,6 +44,7 @@ public class Item {
 
 	public void setHas(int has) {
 		this.checked = true;
+		System.out.println(checked);
 		this.has = has;
 	}
 

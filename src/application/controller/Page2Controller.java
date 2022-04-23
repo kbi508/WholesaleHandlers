@@ -68,8 +68,9 @@ public class Page2Controller {
     	Inventory i = Inventory.getInstance();
     	i.choice = ListView1.getSelectionModel().getSelectedIndex();
     	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page3.fxml"));
-    	Scene scene = new Scene(pane4, 600, 600);
+    	Scene scene = new Scene(pane4);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    	window.sizeToScene();
     	window.setScene(scene);
     	window.show();
     	}

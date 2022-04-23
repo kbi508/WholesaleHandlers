@@ -14,6 +14,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.TextAlignment;
 public class MainController {
@@ -46,9 +47,10 @@ public class MainController {
     	if(f != null) {
     		fileName.setText(f.getName());
     	} else {
-    		fileName.setAlignment(Pos.BASELINE_CENTER);
-    		fileName.setTextAlignment(TextAlignment.CENTER);
-    		System.out.print("File is not vailid");
+    		Alert bad = new Alert(AlertType.ERROR);
+    		bad.setHeaderText("No File was selected for reading");
+    		bad.setContentText("Please select a correctly formated Inventory file");
+    		bad.showAndWait();
     	}
     	
     	
@@ -65,9 +67,10 @@ public class MainController {
 	    	window.setScene(scene);
 	    	window.show();
     	}else {
-    		fileName.setAlignment(Pos.BASELINE_CENTER);
-    		fileName.setTextAlignment(TextAlignment.CENTER);
-    		fileName.setText("You cannot continue without selecting a file!");
+    		Alert bad = new Alert(AlertType.ERROR);
+    		bad.setHeaderText("No File was selected for reading");
+    		bad.setContentText("Please select a correctly formated Inventory file");
+    		bad.showAndWait();
     	}
 
     }

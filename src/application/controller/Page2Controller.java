@@ -58,6 +58,13 @@ public class Page2Controller {
     
     @FXML
     void handle2(ActionEvent event) throws IOException {
+    	if(ListView1.getSelectionModel().getSelectedIndex() ==-1) {
+    		Alert bad = new Alert(AlertType.ERROR);
+    		bad.setHeaderText("No item was selected");
+    		bad.setContentText("Please Select an item to check inventory on!");
+    		bad.showAndWait();
+    		return;
+    	}
     	Inventory i = Inventory.getInstance();
     	i.choice = ListView1.getSelectionModel().getSelectedIndex();
     	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page3.fxml"));
@@ -81,7 +88,6 @@ public class Page2Controller {
     	}
     	System.out.println(untouched.toString());
     	if(untouched.isEmpty()==false) {
-    		System.out.println("NO HAS!!");
     		String uSure = "You have not checked inventory for the following items: ";
     		for(String s: untouched) {
     			uSure += "\n" + s;
@@ -98,6 +104,8 @@ public class Page2Controller {
     			alert.close();
     		}
     	}
+    	
+    	System.out.print(i.getNeeds());
     	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page4.fxml"));
     	Scene scene = new Scene(pane4, 600, 600);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

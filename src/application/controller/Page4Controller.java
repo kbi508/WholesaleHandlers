@@ -10,6 +10,10 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 public class Page4Controller {
@@ -17,12 +21,16 @@ public class Page4Controller {
     @FXML
     private AnchorPane finalpane;
     @FXML
-    private TextArea textArea;
+    private TextFlow finalFlo;
     
+    @FXML
     void initialize() {
     	Inventory i = Inventory.getInstance();
     	System.out.println(i.getNeeds());
-    	textArea.setText(i.getNeeds());
+    	Text fin = new Text(i.getNeeds());
+    	fin.setFill(Color.BLACK);
+    	fin.setFont(new Font(14));
+    	finalFlo.getChildren().add(fin);
     }
 
     @FXML

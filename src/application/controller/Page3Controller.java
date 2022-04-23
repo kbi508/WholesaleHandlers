@@ -80,7 +80,6 @@ public class Page3Controller {
     		int has = Integer.parseInt(userAmmount.getText());
     		if( has >= 0) {
     			curItem.setHas(has);
-        		System.out.println(String.format("There are %d of  %s", curItem.getHas(), curItem.getName()));
     			query.setText(String.format("You have %d %ss",curItem.getHas(), curItem.getName()));
     			query.setAlignment(Pos.BASELINE_RIGHT);
     		}

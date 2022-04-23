@@ -47,13 +47,14 @@ public class Inventory {
 		this.list = list;
 	}
 
-	public static String getNeeds(ArrayList<Item> itemL) {
+	public String getNeeds() {
+		System.out.println("getNeeds is called");
 		String recipt = "";
 		String needStr;
 		int numNeeds;
 		double iCost;
 		double total = 0;
-		for(Item thing: itemL) {
+		for(Item thing: this.list) {
 			numNeeds = thing.maxAmmount - thing.has;
 			if(numNeeds > 0) {
 				iCost = thing.supPrice * numNeeds;
@@ -62,7 +63,7 @@ public class Inventory {
 				recipt = recipt + "\n" + needStr;
 			}
 		}
-		if(recipt == "") {
+		if(recipt.equals("")) {
 			return "Looks like you are all good on inventory!";
 		}
 		recipt += String.format("%nYour total cost is $%.2f", total);

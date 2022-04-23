@@ -44,7 +44,6 @@ public class Item {
 
 	public void setHas(int has) {
 		this.checked = true;
-		System.out.println(checked);
 		this.has = has;
 	}
 

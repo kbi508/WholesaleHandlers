@@ -8,14 +8,14 @@
 
 <AnchorPane fx:id="pane4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Page2Controller">
    <children>
-      <Button layoutX="624.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle1" prefHeight="35.0" prefWidth="61.0" style="-fx-background-color: Black;" text="Home" textFill="WHITE" />
-      <Label layoutX="301.0" layoutY="27.0" prefHeight="26.0" prefWidth="193.0" text="Inventory" underline="true">
+      <Button layoutX="568.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle1" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: Black;" text="Home" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="288.0" layoutY="27.0" prefHeight="26.0" prefWidth="193.0" text="Inventory" underline="true">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="319.0" layoutY="361.0" mnemonicParsing="false" onAction="#handle2" prefHeight="44.0" prefWidth="130.0" text="Select" />
-      <Button layoutX="357.0" layoutY="452.0" mnemonicParsing="false" onAction="#handle3" text="Done" />
-      <ListView fx:id="ListView1" layoutX="279.0" layoutY="98.0" prefHeight="241.0" prefWidth="210.0" />
+      <Button layoutX="319.0" layoutY="400.0" mnemonicParsing="false" onAction="#handle2" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: Navy;" text="Select" textFill="WHITE" />
+      <Button layoutX="319.0" layoutY="469.0" mnemonicParsing="false" onAction="#handle3" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: Navy;" text="Done" textFill="WHITE" />
+      <ListView fx:id="ListView1" layoutX="262.0" layoutY="98.0" prefHeight="280.0" prefWidth="244.0" />
    </children>
 </AnchorPane>

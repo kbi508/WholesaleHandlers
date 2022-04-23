@@ -8,27 +8,27 @@
 
 <AnchorPane fx:id="pane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Page3Controller">
    <children>
-      <Button layoutX="589.0" layoutY="400.0" mnemonicParsing="false" onAction="#handle1" prefHeight="47.0" prefWidth="70.0" text="Back">
+      <Button layoutX="572.0" layoutY="400.0" mnemonicParsing="false" onAction="#handle1" prefHeight="47.0" prefWidth="70.0" style="-fx-background-color: Navy;" text="Back" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button layoutX="407.0" layoutY="330.0" mnemonicParsing="false" onAction="#handle2" text="Add" />
-      <Label fx:id="curName" layoutX="132.0" layoutY="146.0" text="ITEM" textAlignment="CENTER">
+      <Button layoutX="324.0" layoutY="400.0" mnemonicParsing="false" onAction="#handle2" prefHeight="47.0" prefWidth="70.0" style="-fx-background-color: Navy;" text="Add" textFill="WHITE" />
+      <Label fx:id="curName" layoutX="129.0" layoutY="93.0" text="ITEM:" textAlignment="CENTER" underline="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="curMax" layoutX="119.0" layoutY="203.0" text="Quantity" textAlignment="CENTER">
+      <Label fx:id="curMax" layoutX="129.0" layoutY="174.0" text="Quantity:" textAlignment="CENTER" underline="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="curPrice" layoutX="129.0" layoutY="269.0" text="PRICE" textAlignment="CENTER">
+      <Label fx:id="curPrice" layoutX="129.0" layoutY="269.0" text="PRICE:" textAlignment="CENTER" underline="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="query" layoutX="266.0" layoutY="182.0" text="How many BLAH do you currently have?" textAlignment="CENTER">
+      <Label fx:id="query" layoutX="129.0" layoutY="359.0" text="How many BLAH do you currently have?" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
@@ -38,6 +38,6 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="userAmmount" layoutX="349.0" layoutY="246.0" prefHeight="47.0" prefWidth="154.0" />
+      <TextField fx:id="userAmmount" layoutX="132.0" layoutY="400.0" prefHeight="47.0" prefWidth="159.0" />
    </children>
 </AnchorPane>

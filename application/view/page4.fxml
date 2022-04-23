@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="finalpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Page4Controller">
    <children>
-      <Button layoutX="262.0" layoutY="321.0" mnemonicParsing="false" onAction="#handle1" prefHeight="40.0" prefWidth="77.0" text="Home" />
+      <Button layoutX="262.0" layoutY="321.0" mnemonicParsing="false" onAction="#handle1" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: Navy;" text="Home" textFill="WHITE" />
       <TextArea fx:id="textArea" layoutX="187.0" layoutY="49.0" prefHeight="219.0" prefWidth="227.0" />
       <TextField alignment="CENTER" layoutX="214.0" layoutY="14.0" text="Order Summary">
          <font>

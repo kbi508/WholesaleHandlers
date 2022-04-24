@@ -16,7 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Page3Controller {
+public class QuantityController {
 
     @FXML
     private AnchorPane pane3;
@@ -62,7 +62,7 @@ public class Page3Controller {
 
     @FXML
     void handle1(ActionEvent event) throws IOException {
-    	pane3 = FXMLLoader.load(getClass().getResource("/application/view/page2.fxml"));
+    	pane3 = FXMLLoader.load(getClass().getResource("/application/view/inventory.fxml"));
     	Scene scene = new Scene(pane3, 750, 600);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);

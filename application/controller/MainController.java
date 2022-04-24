@@ -59,7 +59,7 @@ public class MainController {
     	if(f!=null) {
     		Inventory i = Inventory.getInstance();
     		Inventory.bigRead(f,i);
-	    	mainPane = FXMLLoader.load(getClass().getResource("/application/view/page2.fxml"));
+	    	mainPane = FXMLLoader.load(getClass().getResource("/application/view/inventory.fxml"));
 	    	Scene scene = new Scene(mainPane, 750, 600);
 	    	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	    	window.setScene(scene);

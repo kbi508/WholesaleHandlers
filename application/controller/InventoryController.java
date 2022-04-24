@@ -17,7 +17,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Page2Controller {
+public class InventoryController {
 	@FXML
 	private ListView<String> ListView1 ;
     
@@ -52,7 +52,7 @@ public class Page2Controller {
     void handle2(ActionEvent event) throws IOException {
     	Inventory i = Inventory.getInstance();
     	i.choice = ListView1.getSelectionModel().getSelectedIndex();
-    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page3.fxml"));
+    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/quantity.fxml"));
     	Scene scene = new Scene(pane4, 600, 500);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);
@@ -63,7 +63,7 @@ public class Page2Controller {
     }
     @FXML
     void handle3(ActionEvent event) throws IOException {
-    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page4.fxml"));
+    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/receipt.fxml"));
     	Scene scene = new Scene(pane4, 600, 500);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);

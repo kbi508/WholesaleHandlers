@@ -23,7 +23,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Page2Controller {
+public class InventoryController {
 	@FXML
 	private ListView<String> ListView1 ;
     
@@ -67,7 +67,7 @@ public class Page2Controller {
     	}
     	Inventory i = Inventory.getInstance();
     	i.choice = ListView1.getSelectionModel().getSelectedIndex();
-    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page3.fxml"));
+    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/quantity.fxml"));
     	Scene scene = new Scene(pane4);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.sizeToScene();
@@ -83,11 +83,8 @@ public class Page2Controller {
     	for(Item item: i.getList()) {
     		if(!item.getChecked()) {
     			untouched.add(item.getName());
-    		} else {
-    			System.out.println(item.getName() + " has been checked!");
-    		}
+    		} 
     	}
-    	System.out.println(untouched.toString());
     	if(untouched.isEmpty()==false) {
     		String uSure = "You have not checked inventory for the following items: ";
     		for(String s: untouched) {
@@ -106,8 +103,7 @@ public class Page2Controller {
     		}
     	}
     	
-    	System.out.print(i.getNeeds());
-    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/page4.fxml"));
+    	pane4 = FXMLLoader.load(getClass().getResource("/application/view/receipt.fxml"));
     	Scene scene = new Scene(pane4, 600, 600);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);

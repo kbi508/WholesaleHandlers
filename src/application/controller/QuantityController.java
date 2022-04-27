@@ -20,7 +20,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class Page3Controller {
+public class QuantityController {
 
     @FXML
     private AnchorPane pane3;
@@ -44,11 +44,7 @@ public class Page3Controller {
     private Item curItem;
     
     
-    /*public void userChoice(int c) {
-    	choice = c;
-    	System.out.println("User Choice");
-    }*/
-    
+   
     @FXML
 	void initialize() {
 		Inventory inv = Inventory.getInstance();
@@ -67,7 +63,7 @@ public class Page3Controller {
 
     @FXML
     void handle1(ActionEvent event) throws IOException {
-    	pane3 = FXMLLoader.load(getClass().getResource("/application/view/page2.fxml"));
+    	pane3 = FXMLLoader.load(getClass().getResource("/application/view/inventory.fxml"));
     	Scene scene = new Scene(pane3, 750, 600);
     	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     	window.setScene(scene);
@@ -85,8 +81,9 @@ public class Page3Controller {
     		}
     		
     	} catch (NumberFormatException e) {
-    		Alert alert = new Alert(AlertType.INFORMATION, "Content here", ButtonType.OK);
-    		alert.show();
+    		Alert alert = new Alert(AlertType.INFORMATION, "Enter current ammount", ButtonType.OK);
+    		alert.setHeaderText("No quantity entered");
+    		alert.showAndWait();
     	}
 
     }

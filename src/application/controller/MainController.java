@@ -37,8 +37,8 @@ public class MainController {
     @FXML
     public void handle1(ActionEvent event) throws IOException{
     	FileChooser fc = new FileChooser();
-    	File dir = new File(FileSystemView.getFileSystemView().getDefaultDirectory().getPath() + (System.getProperty("os.name").toLowerCase().contains("mac") ? "/Documents" : "") + "/InventoryData");
-    	if(!dir.exists())dir.mkdir();
+    	String here = System.getProperty("user.dir") + "/src/data/";
+    	File dir = new File(here);
     	fc.setInitialDirectory(dir);
     	
     	f = fc.showOpenDialog(null);
@@ -61,7 +61,7 @@ public class MainController {
     	if(f!=null) {
     		Inventory i = Inventory.getInstance();
     		Inventory.bigRead(f,i);
-	    	mainPane = FXMLLoader.load(getClass().getResource("/application/view/page2.fxml"));
+	    	mainPane = FXMLLoader.load(getClass().getResource("/application/view/inventory.fxml"));
 	    	Scene scene = new Scene(mainPane, 750, 600);
 	    	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	    	window.setScene(scene);

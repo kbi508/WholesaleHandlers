@@ -48,7 +48,6 @@ public class Inventory {
 	}
 
 	public String getNeeds() {
-		System.out.println("getNeeds is called");
 		String recipt = "";
 		String needStr;
 		int numNeeds;

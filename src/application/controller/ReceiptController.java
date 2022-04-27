@@ -16,7 +16,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-public class Page4Controller {
+public class ReceiptController {
 
     @FXML
     private AnchorPane finalpane;
@@ -26,7 +26,6 @@ public class Page4Controller {
     @FXML
     void initialize() {
     	Inventory i = Inventory.getInstance();
-    	System.out.println(i.getNeeds());
     	Text fin = new Text(i.getNeeds());
     	fin.setFill(Color.BLACK);
     	fin.setFont(new Font(14));
